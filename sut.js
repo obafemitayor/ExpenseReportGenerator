@@ -1,16 +1,4 @@
 'use strict'
-
-// Refactoring Task Description:
-//
-// - Refactor the code to a more extensible, more maintainable state; preferably in an object-oriented fashion. 
-// - If you have time try covering what you deem as the "core domain logic" with some tests. 
-// - Take as much time as you need, but stop when you feel like you have demonstrated enough.
-// - Please provide a runnable fork on replit.com or other online repls.
-//
-// If there are ambiguities or unclarities, make the best decision on your own. We'll rely on your decisions on a daily basis!
-//
-// Happy coding! 🍕
-
 export const type = { BREAKFAST: 1, LUNCH: 2, DINNER: 3, CAR_RENTAL: 4, MOVIES: 4, MUSIC: 5 }
 export const category = { MEAL: 1, VEHICLE: 2, ENTERTAINMENT: 3}
 const expensesDetails = new Map()
