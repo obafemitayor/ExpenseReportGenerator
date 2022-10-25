@@ -23,15 +23,16 @@ export class ExpenseReport{
     console.info("Today Travel Expenses " + new Date().toISOString().slice(0, 10))
   
     for (const expense of expenses) {
+      // Get the type of Expense
       const expenseDetails = expensesDetails.has(expense.type) ? expensesDetails.get(expense.type) : null
-      
+      // Get the category of the expense
       const expenseCategory = expenseCategories.get(expenseDetails.category)
       expenseCategory.total += expense.amount
       let expenseName = expenseDetails ? expenseDetails.name : ""
-
+      // Check if the expense has exceeded the marker for the expense
       const isExpenseOverMarker = expenseDetails && expense.amount > expenseDetails.markerAmount
       const overExpensesMarker = isExpenseOverMarker ? "[over-expense!]" : " ";
-
+      // Add Expense To The Category Report
       expenseCategory.expenses.push({
         name: expenseName, 
         amount: expense.amount,
